@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+    /* Xocial.Stream dark theme tokens */
+    --background: 0.06 0 0;
+    --foreground: 0.98 0 0;
+    --card: 0.13 0.015 210;
+    --card-foreground: 0.98 0 0;
+    --popover: 0.13 0.015 210;
+    --popover-foreground: 0.98 0 0;
+    --primary: 0.87 0.185 200;
+    --primary-foreground: 0.06 0 0;
+    --secondary: 0.74 0.13 210;
+    --secondary-foreground: 0.06 0 0;
+    --muted: 0.2 0.02 210;
+    --muted-foreground: 0.57 0.04 210;
+    --accent: 0.87 0.185 200;
+    --accent-foreground: 0.06 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.2 0.025 210;
+    --input: 0.2 0.025 210;
+    --ring: 0.87 0.185 200;
+    /* Semantic brand colors */
+    --cyan-primary: 0.87 0.185 200;
+    --cyan-secondary: 0.74 0.13 210;
+    --text-cool: 0.92 0.06 210;
+    --text-muted-brand: 0.57 0.04 210;
+    --card-bg: 0.13 0.015 210;
+    --card-border: 0.2 0.025 210;
+    --chart-1: 0.87 0.185 200;
+    --chart-2: 0.74 0.13 210;
+    --chart-3: 0.57 0.04 210;
+    --chart-4: 0.92 0.06 210;
+    --chart-5: 0.98 0 0;
+    --sidebar: 0.1 0.015 210;
+    --sidebar-foreground: 0.98 0 0;
+    --sidebar-primary: 0.87 0.185 200;
+    --sidebar-primary-foreground: 0.06 0 0;
+    --sidebar-accent: 0.2 0.02 210;
+    --sidebar-accent-foreground: 0.98 0 0;
+    --sidebar-border: 0.2 0.025 210;
+    --sidebar-ring: 0.87 0.185 200;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Manrope", sans-serif;
+    background-color: #050505;
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  .glow-cyan {
+    box-shadow: 0 0 20px oklch(0.87 0.185 200 / 0.3), 0 0 40px
+      oklch(0.87 0.185 200 / 0.1);
+  }
+  .glow-cyan-sm {
+    box-shadow: 0 0 10px oklch(0.87 0.185 200 / 0.25);
+  }
+  .glow-cyan-btn {
+    box-shadow: 0 0 20px oklch(0.87 0.185 200 / 0.5), 0 4px 15px
+      oklch(0.87 0.185 200 / 0.3);
+  }
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, #00e5ff 0%, #00b8d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-glow {
+    background: radial-gradient(
+      ellipse 80% 60% at 50% 0%,
+      oklch(0.87 0.185 200 / 0.08) 0%,
+      transparent 70%
+    );
+  }
+  .card-hover {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s
+      ease;
+  }
+  .card-hover:hover {
+    border-color: oklch(0.87 0.185 200 / 0.5);
+    box-shadow: 0 0 25px oklch(0.87 0.185 200 / 0.15);
+    transform: translateY(-2px);
+  }
+}
